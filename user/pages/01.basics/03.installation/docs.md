@@ -6,11 +6,11 @@ taxonomy:
 
 ! Nova is currently in an alpha state and as such is __unstable__ and __not suitable__ for production environments.
 
-Nova NextGen can be run from any web server running PHP 5.5.9 or higher with a MySQL, PostgreSQL, or SQLite database. You can also install Nova NextGen on a local server if you're running one, so long as it has PHP and a database.
+Nova NextGen can be run from any web server running PHP 7.0.0 or higher with a MySQL, PostgreSQL, or MariaDB database. You can also install Nova NextGen on a local server if you're running one, so long as it has PHP and a database.
 
-1. If you have Preview Release 2 installed, you will need to first uninstall that in order to do a fresh install of Preview Release 3
+1. If you have a previous Preview Release installed, you will need to first uninstall that in order to do a fresh install of Preview Release 4
 2. Upload Nova NextGen to your server (or if it's a local server, copy the files to the location where you want it)
-3. Navigate to `http://<yoursite>` and you'll be automatically redirected to the Setup Center
+3. Navigate to `http://{yoursite}` and you'll be automatically redirected to the Setup Center
 4. You may be prompted to make certain directories writable in order to continue. Laravel requires having the ability to create files for logging, caching, and other framework operations. You'll need to make the `config`, `storage`, and `nova/bootstrap/cache` directories (as well as all their sub-directories) writable by the web server (`755`).
 5. Select the option to do a Fresh Install of Nova NextGen and follow the prompts
 
