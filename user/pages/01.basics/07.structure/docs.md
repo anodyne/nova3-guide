@@ -4,7 +4,7 @@ taxonomy:
     category: docs
 ---
 
-In previous versions of Nova, our goal was to keep the file structure at the root as compact and simple as possible. What came out of that was a 2 folder structure: `application` and `nova`. It was immediately clear that `application` was for things for your own application and that `nova` was for the Nova core.
+In previous versions of Nova, our goal was to keep the file structure at the root as compact and simple as possible. What came out of that was a two folder structure: `application` and `nova`. It was immediately clear that `application` was for things for your own application and that `nova` was for the Nova core.
 
 Unfortunately, that simplicity led to a lot more complication and questions than we expected. With Nova 3, the goal is still simplicity, but also context. To that end, the file structure is more expanded than it's been before.
 
@@ -24,11 +24,11 @@ Unfortunately, that simplicity led to a lot more complication and questions than
 
 The `config` directory, as the name implies, contains Nova's configuration files. For the most part, settings that you'll change regularly will be found in Nova itself, but highly sensitive settings or settings that could create issues if they're modified, are kept in these PHP files.
 
-Most Laravel applications will store all of their config files here, but given Nova's unique requirements, the config files are stored in the Nova core and you can override those settings by creating a file with the appropriate array keys in this folder.
+Most Laravel applications will store all of their config files here, but given Nova's unique requirements, the config files are stored in the Nova core and you can override those settings by creating a file with the appropriate array keys in this folder. To see all of Nova's config files, you can look through the `nova/config` directory.
 
 ### /extensions
 
-The `extensions` directory stores any extensions (referred to as MODs in previous versions of Nova) that are intended to extend Nova's core functionality. In Nova 3, extensions stand on their own (similar to a module) and can contain all kinds of code and are the recommended way to significantly modify Nova.
+The `extensions` directory stores any extensions (referred to as MODs in previous versions of Nova) that are intended to extend Nova's core functionality. In Nova NextGen, extensions stand on their own (similar to a module) and can contain all kinds of code and are the recommended way to modify Nova's behavior.
 
 ### /nova
 
@@ -38,7 +38,7 @@ The Nova core is contained within the `nova` directory.
 
 ##### /bootstrap
 
-Not to be confused with the Bootstrap framework that Nova 3 uses, the `bootstrap` folder contains files that are used to "bootstrap" the framework. ("Bootstrapping" is the process by which the program is actually started.) Including during bootstrapping is the autoload configuration (to make sure everything is available when called) as well as a `cache` folder that contains a few framework generated files for bootstrap performance optimization.
+Not to be confused with the Bootstrap framework that Nova NextGen uses, the `bootstrap` folder contains files that are used to "bootstrap" the framework. ("Bootstrapping" is the process by which the program is actually started.) Included during bootstrapping is the autoload configuration (to make sure everything is available when called) as well as a `cache` folder that contains a few framework generated files for bootstrap performance optimization.
 
 ##### /config
 
@@ -46,7 +46,7 @@ Much like the root `config` directory, the `nova/config` directory stores all of
 
 ##### /resources
 
-The `resources` directory contains all of the Javascript, CSS, hosted fonts, views, and other presentation files used by Nova. If you need to override a view file, this is where you'll come to find the base view file.
+The `resources` directory contains all of the JavaScript, CSS, hosted fonts, views, and other presentation files used by Nova. If you need to override a view file, this is where you'll come to find the base view file.
 
 ##### /src
 
@@ -62,11 +62,11 @@ The `vendor` directory contains all of the third-party dependencies that Laravel
 
 ### /ranks
 
-The `ranks` directory is where rank images are kept to be used throughout Nova.
+The `ranks` directory is where groups of rank images are kept to be used throughout Nova.
 
 ### /storage
 
-This really is the only "gotcha" out of the entire root file structure. This directory is actually something that's used primarily by Laravel (though Nova utilizes it for several things as well) for storing different types of files and logs. The `storage` folder is broken up into `app`, `framework`, and `logs` directories.
+This really is the only "gotcha" out of the entire file structure. This directory is actually something that's used primarily by Laravel (though Nova utilizes it for several things as well) for storing different types of files and logs. The `storage` folder is broken up into `app`, `framework`, and `logs` directories.
 
 - The `app` directory is used to store files utilized by the Nova core.
 - The `framework` directory is used to store framework generated files and caches (compiled Blade templates, file-based sessions, file caches, and other files).

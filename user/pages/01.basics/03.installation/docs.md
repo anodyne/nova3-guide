@@ -8,7 +8,7 @@ taxonomy:
 
 Nova NextGen can be run from any web server running PHP 5.5.9 or higher with a MySQL, PostgreSQL, or SQLite database. You can also install Nova NextGen on a local server if you're running one, so long as it has PHP and a database.
 
-1. If you have Preview Release 1 installed, you will need to first uninstall that in order to do a fresh install of Preview Release 2
+1. If you have Preview Release 2 installed, you will need to first uninstall that in order to do a fresh install of Preview Release 3
 2. Upload Nova NextGen to your server (or if it's a local server, copy the files to the location where you want it)
 3. Navigate to `http://<yoursite>` and you'll be automatically redirected to the Setup Center
 4. You may be prompted to make certain directories writable in order to continue. Laravel requires having the ability to create files for logging, caching, and other framework operations. You'll need to make the `config`, `storage`, and `nova/bootstrap/cache` directories (as well as all their sub-directories) writable by the web server (`755`).
@@ -18,4 +18,4 @@ Once Nova NextGen is installed, you'll be re-directed to a basic front page with
 
 !!! __Theme developers:__ Much of the structure for themes is in place now. You can look through the nova/resources/views directory to see what's there and read more in the Site Themes overview of the Nova NextGen Vision series.
 !!!
-!!! __Extension developers:__ There hasn't been any work done on extensions yet, but in future preview releases we'll have more stuff for you to play with.
+!!! __Extension developers:__ Some preliminary work has been done on extensions. In future preview releases, we'll have more of the extension built out to play around with.

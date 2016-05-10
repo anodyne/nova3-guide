@@ -54,10 +54,10 @@ Most hosting providers and even local LAMP setups have PHP pre-configured with e
 
 ## File Permissions
 
-For Nova to function properly your web server needs to have the appropriate file permissions in order to write logs, caches, etc. When using either the CLI or GPM, the user running PHP from the command line, also needs to have the appropriate permissions to modify files.
+For Nova to function properly your web server needs to have the appropriate file permissions in order to write logs, caches, etc.
 
-Most hosting providers have configurations that ensure the web server running PHP will allow you to create and modify files within your user account. This means that Nova runs out-of-the-box on the vast majority of hosting providers. However, if you're running on a dedicated server, or even your local environment, you may need to adjust permissions to ensure you user and your web server can modify files as needed. There are a couple of approaches you can take.
+Most hosting providers have configurations that ensure the web server running PHP will allow you to create and modify files within your user account. This means that Nova runs out-of-the-box on the vast majority of hosting providers. However, if you're running on a dedicated server, or even your local environment, you may need to adjust permissions to ensure your user and your web server can modify files as needed. There are a couple of approaches you can take.
 
-In a local development environment, you can usually configure your web server to run under you user profile. This way the web server will always allow you to create and modify files.
+In a local development environment, you can usually configure your web server to run under your user profile. This way the web server will always allow you to create and modify files.
 
-You can also change the group permissions on all files and folders so that the web server's group has write access to files and folders while keeping the standard permissions. This requires a few commands to make this work (note: adjust www-data to be the group your apache runs under [www-data, apache, nobody, etc.]):
+You can also change the group permissions on all files and folders so that the web server's group has write access to files and folders while keeping the standard permissions. This requires a few commands to make this work (note: adjust `www-data` to be the group your apache runs under [`www-data`, `apache`, `nobody`, etc.]).
