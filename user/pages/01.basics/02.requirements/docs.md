@@ -7,7 +7,7 @@ taxonomy:
 Nova has intentionally been designed with as few technical requirements as possible.
 
 1. Web server (Apache or Nginx work well; LiteSpeed, Lightly, or IIS may work, but are untested)
-2. PHP 5.6.4 or higher
+2. PHP 7.0.0 or higher
 3. A relational database system (MySQL, PostgreSQL, MariaDB)
 4. A modern browser such as Google Chrome, Safari, or Firefox
 
@@ -21,11 +21,14 @@ Even though you don't technically _need_ a standalone web server, it's better to
 
 - OS X 10.9 Mavericks already ships with the Apache web server and PHP 5.5, so job done!
 - [MAMP/MAMP Pro](http://mamp.info/) comes with Apache, MySQL and of course PHP. It's a great way to get more control over which version of PHP you're running, setting up virtual hosts (MAMP Pro only), plus other useful features.
+- Laravel Homestead (advanced users only)
+- Laravel Valet (advanced users only)
 
 ### Windows
 
 - [XAMPP](https://www.apachefriends.org/index.html) provides Apache, PHP, and MySQL in one simple package
 - [MAMP for Windows](http://mamp.info/) is a long-time Mac favorite, but now available for Windows
+- Laravel Homestead (advanced users only)
 
 ### Linux
 

@@ -45,7 +45,8 @@ return [
 		'name' => "name",
 		'email' => "me@example.com",
 		'password' => "password",
-                'role' => 1,
+        'role' => 1,
+        'status' => Status::ACTIVE,
 	],
 
 	'character' => [
