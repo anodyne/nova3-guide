@@ -4,26 +4,26 @@ taxonomy:
     category: docs
 ---
 
-Let's create a basic theme that will cover some of the most basic things you may want to do with your own themes.
+Let's create a theme that will cover some of the basic things you may want to do with your own themes.
 
-We'll start by creating the skeleton of our theme. You can use the Artisan `nova:make:theme` command to set your theme up quickly, but for further clarity, we'll do all of our setup manually for this theme.
+We'll start by creating the skeleton of our theme. You can use the Artisan `nova:make:theme` command to set your theme up quickly, but we'll do all of our setup manually for this theme.
 
-1. Create a directory in the root `/themes` folder called __emerald__
+1. Create a directory in the root `/themes` folder called __spectrum__
 2. Create a directory in your theme called __design__
 3. Create a directory in your `design` folder called __css__
-4. Create a file called `custom.css` in the `design/css` directory
+4. Create a file called __custom.css__ in the `design/css` directory
 
 You now have the minimum required structure for your theme!
 
 ```
 /themes
-    /emerald
+    /spectrum
         /design
             /css
                 custom.css
 ```
 
-! Since the Settings page hasn't been built, you'll need to manually modify the `theme` field in the settings database table to be `emerald` otherwise you won't see any changes. Also note that you'll need to be logged out to see these changes since they apply to the site as a whole and not the theme associated with your user account.
+! Since the Settings page hasn't been built, you'll need to manually modify the `theme` field in the settings database table to be `spectrum` otherwise you won't see any changes. Also note that you'll need to be logged out to see these changes since they apply to the site as a whole and not the theme associated with your user account.
 
 Let's start by changing up the page header for every page in our theme.
 
@@ -66,26 +66,26 @@ Now, we've changed the way that links look in the main content of the site. Not 
 
 !!! The `main` element is an HTML5 element that we wrap around the content. By targeting that element specifically, we ensure that any links that _aren't_ in that element stay the way they are by default.
 
-Let's go a little crazy here and update the style of the top navbar to make it static so it always stays at the top of the page. Instead of trying to do this in the CSS, we're going to leverage Nova's extensive use of partials and change the Bootstrap classes that we're using when building up the menu. To start this, we need to create a folder structure to do this.
+Let's go a little crazy here and update the style of the top navbar to make it static so it always stays at the top of the page. Instead of trying to do this in the CSS, we're going to leverage Nova's use of partials and change the Bootstrap classes that we're using when building up the menu. To start this, we need to create the folder structure to do this.
 
-1. Create a directory called `components` at the root of the theme
-2. Create a directory called `partials` in the `components` folder
-3. Copy the `menu-combined.blade.php` from `nova/resources/views/components/partials` and paste it into your own `components/partials` folder
+1. Create a directory called __components__ at the root of the theme
+2. Create a directory called __partials__ in the `components` folder
+3. Copy the `menu-top.blade.php` file from `nova/resources/views/components/partials` and paste it into your own `components/partials` folder
 
 Now that we have this file here, Nova will use it instead of what's in the core.
 
 ```
 /themes
-    /emerald
+    /spectrum
         /components
             /partials
-                menu-combined.blade.php
+                menu-top.blade.php
         /design
             /css
                 custom.css
 ```
 
-Update the opening line of the `menu-combined` partial to use the Bootstrap fixed navbar class.
+Update the opening line of the `menu-top` partial to use the Bootstrap fixed navbar class.
 
 ```html
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -159,10 +159,10 @@ Simply put, variants are a way to provide variations of your theme without need 
 
 ```
 /themes
-    /emerald
+    /spectrum
         /components
             /partials
-                menu-combined.blade.php
+                menu-top.blade.php
         /design
             /css
                 /variants
@@ -194,4 +194,4 @@ You'll notice that we don't need to re-do all of our spacing and sizing and such
 
 ## Wrapping Up
 
-This is a pretty simple example, but it shows you a few of the possibilities for building your themes. In future sections, we'll talk more about some of the advanced topics about themeing in Nova.
+This is a pretty simple example, but it shows you a few of the possibilities for building your themes. In future sections, we'll talk more about some of the advanced topics about creating themes in Nova.
