@@ -13,7 +13,6 @@
 		<li><a href="/getting-started/file-structure">File Structure</a></li>
 		<li><a href="/getting-started/configuration">Configuration</a></li>
 		<!--<li><a href="#">The Admin Panel</a></li>-->
-		<li>More coming soon...</li>
 	</ul>
 
 	<h4>Page Manager</h4>
